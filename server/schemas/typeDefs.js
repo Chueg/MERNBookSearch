@@ -24,14 +24,25 @@ const typeDefs = gql`
     user: User
   }
 
+  input saveBookInput {
+    authors: [String]
+    description: String!
+    title: String!
+    bookId: String!
+    image: String
+    link: String
+  }
+  
 
   type Query {
     me: [User]
   }
 
   type Mutation {
-    createMatchup(tech1: String!, tech2: String!): Matchup
-    createVote(_id: String!, techNum: Int!): Matchup
+    login(email: String!, password: String!): Auth
+    addUser(username: String!, email: String!, password: String!): Auth
+    saveBook(criteria: saveBookInput): [User]! 
+    removeBook(bookId: ID!): User
   }
 `;
 
