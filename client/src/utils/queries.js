@@ -4,8 +4,8 @@ export const GET_ME =gql`
     {
         me{
             _id
-            username
             email
+            username
             savedBooks{
                 authors
                 description
