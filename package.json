@@ -16,7 +16,6 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
-    "node": "^19.2.0",
-    "node.js": "^0.0.1-security"
+    "node": "^19.2.0"
   }
 }
